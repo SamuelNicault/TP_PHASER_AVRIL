@@ -106,6 +106,9 @@ class Scene5 extends Phaser.Scene {
     this.player.setCollideWorldBounds(true);
     this.player.body.setGravityY(0);
 
+    this.physics.add.collider(this.player,this.barrières);
+
+
         //Cameras
     this.cameras.main.startFollow(this.player);
     this.cameras.main.setBounds(0, 0, 1600, 600);

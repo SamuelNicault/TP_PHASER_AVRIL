@@ -46,7 +46,7 @@ class Scene4 extends Phaser.Scene {
     this.load.image('cible', 'assets/objets/neigeadrop.png');
     this.load.image('fin','assets/monde/credits.png');
     this.load.image('poulette','assets/objets/poulette.png');
-    this.load.image('background2','assets/monde/dungeon.png');
+    this.load.image('background3','assets/monde/galerie.png');
 
 
     this.load.spritesheet('perso','assets/personnages/Inuit_saut.png', {frameWidth: 20, frameHeight: 28});
@@ -83,7 +83,7 @@ class Scene4 extends Phaser.Scene {
 
         //Monde
     this.physics.world.setBounds(0, 0, 1600, 600);
-    this.add.image(0,0,'background2').setOrigin(0,0);
+    this.add.image(0,0,'background3').setOrigin(0,0);
 
 		this.barrières = this.physics.add.staticGroup();
 		this.barrières.create(900,132, 'platform').setScale(20,4.8).refreshBody();
@@ -92,7 +92,7 @@ class Scene4 extends Phaser.Scene {
 
     this.door = this.physics.add.staticGroup();
     this.door.create(1560,306,'poulette');
-    this.door.setAlpha(0);
+    this.door.setTint(0x000);
 
         //Sac
     this.grenadePic = this.add.image(200,70,'grenadePic').setScrollFactor(0, 0).setAlpha(0);
@@ -156,6 +156,9 @@ class Scene4 extends Phaser.Scene {
     this.choixText.setScrollFactor(0, 0);
     this.scoreText = this.add.text(25,120,('Money:' + this.score) +  '   F' + this.poisson + '   B' + this.bottle + '   G' + this.grenade + '   A' + this.arrow, {fontsize: '32px', fill: '#000000'});
     this.scoreText.setScrollFactor(0, 0);
+
+    this.physics.add.collider(this.player,this.barrières);
+
 
 		function fadeLevel(player, door) {
       if(this.keys.O.isDown){
