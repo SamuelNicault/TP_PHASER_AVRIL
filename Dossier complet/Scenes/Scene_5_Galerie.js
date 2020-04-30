@@ -169,7 +169,7 @@ class Scene5 extends Phaser.Scene {
 
 		function changeLevel () {
 			console.log('change de level');
-      this.scene.start('Fin', {vie : this.vie, score : this.score, grenade : this.grenade, poisson : this.poisson, bottle : this.bottle, arrow : this.arrow});
+      this.scene.start('Credits', {vie : this.vie, score : this.score, grenade : this.grenade, poisson : this.poisson, bottle : this.bottle, arrow : this.arrow});
 		}
 
   }//Fin Create
@@ -260,7 +260,7 @@ class Scene5 extends Phaser.Scene {
     }
 
     if(this.keys.A.isDown){
-      this.scene.start('Fin', {vie : this.vie, score : this.score, grenade : this.grenade, poisson : this.poisson, bottle : this.bottle, arrow : this.arrow});
+      this.scene.start('Credits', {vie : this.vie, score : this.score, grenade : this.grenade, poisson : this.poisson, bottle : this.bottle, arrow : this.arrow});
     }
 
         //Animations Joueur et Monstres

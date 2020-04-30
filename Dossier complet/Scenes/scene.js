@@ -6,12 +6,12 @@ var config = {
 		default: 'arcade',
 		arcade: {
 			gravity: {y: 0},
-			debug: true
+			debug: false
 
 		}
 	},
 
-	scene: [ /*Scene1,*/ Scene2, Scene3, Scene4, Scene5, Scene6, Scene7]
+	scene: [Scene1, Scene2, Scene3, Scene4, Scene5, Scene6, Scene7]
 
 };
 

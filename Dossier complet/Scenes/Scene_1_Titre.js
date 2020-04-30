@@ -5,20 +5,17 @@ class Scene1 extends Phaser.Scene {
 
 
   init(){
-    this.odyssey;
+    this.quete;
     this.press;
   }
 
   preload(){
-    this.load.image('odyssey','assets/odyssey.png');
-    this.load.image('odyssey_nul','assets/odyssey_nul.png');
-    this.load.spritesheet('press','assets/press.png', {frameWidth: 70, frameHeight: 30});
+    this.load.image('quete','assets/monde/quete.png');
+    this.load.spritesheet('press','assets/monde/press.png', {frameWidth: 70, frameHeight: 30});
   }
 
   create(){
-    this.add.image(512,360,'odyssey_nul');
-
-    this.odyssey = this.physics.add.sprite(512,360,'odyssey');
+    this.quete = this.physics.add.sprite(400,300,'quete');
     this.keys = this.input.keyboard.addKeys('A');
     this.timedEvent = this.time.delayedCall(3000, changeLevel, [], this);
 
